@@ -87,12 +87,19 @@
 <section id="portfolio">
     <h2>Portfolio</h2>
     <div class="portfolio">
-        <img src="photo1.jpg" alt="Photo 1">
-        <img src="photo2.jpg" alt="Photo 2">
-        <img src="photo3.jpg" alt="Photo 3">
-        <!-- Add more photos here -->
+        <picture>
+          <source srcset="photo1.webp" type="image/webp">
+          <source srcset="photo1.jpg" type="image/jpeg">
+          <img src="photo1.jpg" alt="Photo 1" loading="lazy">
+        </picture>
+        <picture>
+          <source srcset="photo2.webp" type="image/webp">
+          <source srcset="photo2.jpg" type="image/jpeg">
+          <img src="photo2.jpg" alt="Photo 2" loading="lazy">
+        </picture>
     </div>
 </section>
+
 
 <section id="about">
     <h2>About Me</h2>
