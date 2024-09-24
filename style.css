@@ -1,190 +1,100 @@
 /* General Styles */
-:root {
-    --primary-color: #333;
-    --secondary-color: #555;
-    --background-color: #f4f4f4;
-    --text-color: #333;
-    --white: #fff;
-    --border-radius: 5px;
-    --max-width: 1000px;
-}
-
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--background-color);
-}
-
-h1, h2 {
-    font-family: 'Helvetica Neue', sans-serif;
-    color: var(--text-color);
+    background-color: #f4f4f4;
 }
 
 /* Header */
 header {
-    background-color: var(--primary-color);
-    color: var(--white);
-    padding: 20px 0;
+    background-color: #333;
+    color: white;
+    padding: 1rem;
     text-align: center;
+    transition: padding 0.3s ease, font-size 0.3s ease; /* Smooth transition for padding and font size */
 }
 
-header h1 {
-    margin: 0;
-    font-size: 2.5rem;
+header.shrink {
+    padding: 0.5rem; /* Reduced padding */
+    font-size: 1.5rem; /* Smaller font size */
 }
 
 /* Navigation */
 nav {
     text-align: center;
-    margin: 15px 0;
+    margin: 1rem 0;
 }
 
 nav a {
-    color: var(--text-color);
+    margin: 0 1rem;
     text-decoration: none;
-    margin: 0 20px;
+    color: #333;
     font-weight: bold;
-    transition: color 0.3s ease;
 }
 
-nav a:hover {
-    color: var(--secondary-color);
+/* Section Styles */
+section {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 1rem;
+    text-align: center; /* Centering text in sections */
 }
 
 /* Portfolio Section */
-#portfolio {
-    padding: 50px 0;
-    text-align: center;
-}
-
-.portfolio {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
 .portfolio img {
     width: 100%;
     max-width: 300px;
-    margin: 15px;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
+    margin: 1rem;
+    display: inline-block;
+    border-radius: 8px;
 }
 
-.portfolio img:hover {
-    transform: scale(1.05);
-}
-
-/* About Section */
-#about {
-    background-color: var(--white);
-    padding: 50px 20px;
-    text-align: center;
-    color: var(--text-color);
-}
-
-#about p {
-    max-width: 700px;
-    margin: 0 auto;
-    line-height: 1.6;
-}
-
-/* Contact Section */
-#contact {
-    background-color: #f9f9f9;
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.contact-form {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: left;
-}
-
+/* Contact Form */
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    padding: 10px;
-    margin: 10px 0;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    border-radius: 5px;
     border: 1px solid #ccc;
-    border-radius: var(--border-radius);
-    font-size: 1rem;
 }
 
 .contact-form button {
-    background-color: var(--primary-color);
-    color: var(--white);
-    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
     border: none;
-    border-radius: var(--border-radius);
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
 }
 
-.contact-form button:hover {
-    background-color: var(--secondary-color);
-}
-
-/* Footer */
 /* Footer */
 footer {
-    background-color: var(--primary-color);
-    color: var(--white);
+    background-color: #333;
+    color: white;
     text-align: center;
-    padding: 15px 0;
+    padding: 1rem;
     position: relative;
     bottom: 0;
     width: 100%;
     display: flex;
-    justify-content: center; /* Centering all contents */
+    justify-content: center; /* Centering footer content */
     align-items: center;
-    flex-direction: column; /* Stack items vertically */
 }
 
-footer p {
-    margin: 0;
-    font-size: 0.9rem;
-}
-
+/* Social Links */
 .social-links {
     display: flex;
     gap: 10px; /* Space between icons */
-    margin-top: 10px; /* Adds space above the social links */
 }
 
 .social-links img {
     width: 24px; /* Adjust size as needed */
     height: auto;
-    border: 2px solid #fff; /* White border */
-    border-radius: 50%; /* Makes the border circular */
-    padding: 5px; /* Space between the border and the icon */
-    transition: transform 0.3s ease; /* Add a transition for hover effect */
-}
-
-.social-links img:hover {
-    transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
 
 
-/* Media Queries */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem;
-    }
 
-    nav a {
-        margin: 0 10px;
-    }
 
-    .contact-form input,
-    .contact-form textarea {
-        padding: 8px;
-    }
-    
-    .contact-form button {
-        padding: 8px 16px;
-    }
-}
