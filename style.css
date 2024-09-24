@@ -1,20 +1,30 @@
 /* General Styles */
+:root {
+    --primary-color: #333;
+    --secondary-color: #555;
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --white: #fff;
+    --border-radius: 5px;
+    --max-width: 1000px;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: var(--background-color);
 }
 
 h1, h2 {
     font-family: 'Helvetica Neue', sans-serif;
-    color: #333;
+    color: var(--text-color);
 }
 
 /* Header */
 header {
-    background-color: #333;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--white);
     padding: 20px 0;
     text-align: center;
 }
@@ -31,7 +41,7 @@ nav {
 }
 
 nav a {
-    color: #333;
+    color: var(--text-color);
     text-decoration: none;
     margin: 0 20px;
     font-weight: bold;
@@ -39,13 +49,19 @@ nav a {
 }
 
 nav a:hover {
-    color: #555;
+    color: var(--secondary-color);
 }
 
 /* Portfolio Section */
 #portfolio {
     padding: 50px 0;
     text-align: center;
+}
+
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .portfolio img {
@@ -62,10 +78,10 @@ nav a:hover {
 
 /* About Section */
 #about {
-    background-color: #fff;
+    background-color: var(--white);
     padding: 50px 20px;
     text-align: center;
-    color: #333;
+    color: var(--text-color);
 }
 
 #about p {
@@ -87,41 +103,88 @@ nav a:hover {
     text-align: left;
 }
 
-.contact-form input, .contact-form textarea {
+.contact-form input,
+.contact-form textarea {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     font-size: 1rem;
 }
 
 .contact-form button {
-    background-color: #333;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--white);
     padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: var(--border-radius);
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .contact-form button:hover {
-    background-color: #555;
+    background-color: var(--secondary-color);
 }
 
 /* Footer */
+/* Footer */
 footer {
-    background-color: #333;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--white);
     text-align: center;
     padding: 15px 0;
     position: relative;
     bottom: 0;
     width: 100%;
+    display: flex;
+    justify-content: center; /* Centering all contents */
+    align-items: center;
+    flex-direction: column; /* Stack items vertically */
 }
 
 footer p {
     margin: 0;
     font-size: 0.9rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 10px; /* Space between icons */
+    margin-top: 10px; /* Adds space above the social links */
+}
+
+.social-links img {
+    width: 24px; /* Adjust size as needed */
+    height: auto;
+    border: 2px solid #fff; /* White border */
+    border-radius: 50%; /* Makes the border circular */
+    padding: 5px; /* Space between the border and the icon */
+    transition: transform 0.3s ease; /* Add a transition for hover effect */
+}
+
+.social-links img:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav a {
+        margin: 0 10px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 8px;
+    }
+    
+    .contact-form button {
+        padding: 8px 16px;
+    }
 }

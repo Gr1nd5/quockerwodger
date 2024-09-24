@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <link rel="stylesheet" href="style.css">
@@ -53,6 +53,9 @@
             position: relative;
             bottom: 0;
             width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         .contact-form input, .contact-form textarea {
             width: 100%;
@@ -68,6 +71,15 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+        }
+        .social-links {
+            display: flex;
+            gap: 10px; /* Space between icons */
+            margin-left: 20px; /* Aligns to the left */
+        }
+        .social-links img {
+            width: 24px; /* Adjust size as needed */
+            height: auto;
         }
     </style>
 </head>
@@ -111,6 +123,17 @@
 
 <footer>
     <p>&copy; 2024 Quockerwodger Photography. All rights reserved.</p>
+    <div class="social-links">
+        <a href="https://www.behance.net/Quockerwodger" target="_blank">
+            <img src="logo/behance-logo.svg" alt="Behance Logo">
+        </a>
+        <a href="https://www.linkedin.com/in/spencer-nakamura-9736ab2a3?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank">
+            <img src="logo/linkedin-logo.svg" alt="LinkedIn Logo">
+        </a>
+        <a href="https://www.instagram.com/quockerw0dger/" target="_blank">
+            <img src="logo/instagram-logo.svg" alt="Instagram Logo">
+        </a>
+    </div>
 </footer>
 
 </body>
