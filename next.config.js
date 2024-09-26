@@ -1,12 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: 'export',
-    distDir: 'out',
-    images: {
-        unoptimized: true,
-    },
-    basePath: '',
-    assetPrefix: '',
-};
-
-module.exports = nextConfig;
+    basePath: process.env.NODE_ENV === 'production' ? '/quockerwodger.ca' : '',
+    assetPrefix: process.env.NODE_ENV === 'production' ? '/quockerwodger.ca/' : '',
+  };
+  
+  module.exports = nextConfig;
+  
