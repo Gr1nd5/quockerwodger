@@ -1,12 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: 'export', // Enables static export
-    distDir: 'out',   // Directory for static files
+    output: 'export',
+    distDir: 'out',
     images: {
-        unoptimized: true, // Disable image optimization
+        unoptimized: true,
     },
-    basePath: '/<your-repo-name>', // Your GitHub repo name
-    assetPrefix: '/<your-repo-name>/', // Your GitHub repo name
+    basePath: process.env.NODE_ENV === 'development' ? '' : '/quockerwodger', // Adjust for local dev
+    assetPrefix: process.env.NODE_ENV === 'development' ? '' : '/quockerwodger/',
 };
 
 module.exports = nextConfig;
