@@ -2,6 +2,8 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const path = require('path');
+require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -10,13 +12,14 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, 'public'))); // Serve static files
 
 // Email configuration
 const transporter = nodemailer.createTransport({
-    service: 'Gmail', // You can use other services like Outlook, Yahoo, etc.
+    service: 'Gmail', // Use your email provider
     auth: {
-        user: 'your_email@gmail.com', // Your email address
-        pass: 'your_email_password' // Your email password or an app-specific password
+        user: process.env.EMAIL_USER, // Your email from .env
+        pass: process.env.EMAIL_PASS  // Your email password from .env
     }
 });
 
@@ -25,7 +28,7 @@ app.post('/send', (req, res) => {
     const { name, email, message } = req.body;
 
     const mailOptions = {
-        from: email, // Sender's email address
+        from: email,
         to: 'SpencerNakamura@quockerwodger.ca', // Your email address
         subject: `New message from ${name}`,
         text: `You have received a new message from ${name} (${email}):\n\n${message}`
@@ -37,6 +40,11 @@ app.post('/send', (req, res) => {
         }
         res.status(200).send('Message sent successfully!');
     });
+});
+
+// Serve the main HTML file
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 // Start the server
