@@ -1,50 +1,25 @@
 const express = require('express');
-const nodemailer = require('nodemailer');
-const bodyParser = require('body-parser');
-const cors = require('cors');
 const path = require('path');
-require('dotenv').config();
-
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Middleware
-app.use(cors());
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'public'))); // Serve static files
+// Middleware to serve static files
+app.use(express.static(path.join(__dirname, 'public')));
 
-// Email configuration
-const transporter = nodemailer.createTransport({
-    service: 'Gmail', // Use your email provider
-    auth: {
-        user: process.env.EMAIL_USER, // Your email from .env
-        pass: process.env.EMAIL_PASS  // Your email password from .env
-    }
+// Middleware to parse JSON
+app.use(express.json());
+
+// Route to serve the HTML file
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
 
-// Contact form endpoint
+// Endpoint to handle form submissions
 app.post('/send', (req, res) => {
     const { name, email, message } = req.body;
-
-    const mailOptions = {
-        from: email,
-        to: 'SpencerNakamura@quockerwodger.ca', // Your email address
-        subject: `New message from ${name}`,
-        text: `You have received a new message from ${name} (${email}):\n\n${message}`
-    };
-
-    transporter.sendMail(mailOptions, (error, info) => {
-        if (error) {
-            return res.status(500).send(error.toString());
-        }
-        res.status(200).send('Message sent successfully!');
-    });
-});
-
-// Serve the main HTML file
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+    // You can handle the form data here, e.g., send an email or save to a database
+    console.log(`Name: ${name}, Email: ${email}, Message: ${message}`);
+    res.status(200).send('Message received');
 });
 
 // Start the server
