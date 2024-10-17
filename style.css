@@ -119,20 +119,41 @@ section {
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    padding: 0.5rem;
-    margin: 0.5rem 0;
+    padding: 0.75rem;
+    margin: 0.75rem 0;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
+    font-size: 1rem;
 }
 
 .contact-form button {
     background-color: #333;
     color: #fff;
-    padding: 0.75rem 1.5rem;
+    padding: 0.75rem 2rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
+.contact-form button:hover {
+    background-color: #007BFF; /* Highlight on hover */
+}
+
+.contact-form p {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.contact-form a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.contact-form a:hover {
+    text-decoration: underline;
+}
+
 
 /* Footer */
 footer {
