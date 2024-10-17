@@ -26,17 +26,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Professional photography by Spencer Nakamura. Browse portfolio and contact for bookings.">
         <title>Quockerwodger Photography</title>
-        <style>
-            /* Include your CSS here */
-        </style>
+
+        <!-- Lightbox2 CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css" rel="stylesheet" />
     </head>
     
-
 <body>
     <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVXFKFDM"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVXFKFDM"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
+
     <header>
         <h1>Quockerwodger Photography</h1>
         <div class="social-links">
@@ -54,7 +54,6 @@
         </div>
     </header>
     
-
     <nav>
         <a href="#portfolio">Portfolio</a>
         <a href="#about">About</a>
@@ -64,11 +63,28 @@
     <main>
         <section id="portfolio">
             <h2>Portfolio</h2>
-            <div class="portfolio">
-                <img src="photo1.jpg" alt="Photo 1">
-                <img src="photo2.jpg" alt="Photo 2">
-                <img src="photo3.jpg" alt="Photo 3">
-                <!-- Add more photos here -->
+            <nav class="portfolio-categories">
+                <a href="#events">Events</a>
+                <a href="#portraits">Portraits</a>
+                <a href="#landscapes">Landscapes</a>
+            </nav>
+
+            <div id="events" class="portfolio">
+                <h3>Events</h3>
+                <a href="event1.jpg" data-lightbox="events" data-title="Event Photo 1"><img src="event1.jpg" alt="Event Photo 1" loading="lazy"></a>
+                <a href="event2.jpg" data-lightbox="events" data-title="Event Photo 2"><img src="event2.jpg" alt="Event Photo 2" loading="lazy"></a>
+            </div>
+
+            <div id="portraits" class="portfolio">
+                <h3>Portraits</h3>
+                <a href="portrait1.jpg" data-lightbox="portraits" data-title="Portrait Photo 1"><img src="portrait1.jpg" alt="Portrait Photo 1" loading="lazy"></a>
+                <a href="portrait2.jpg" data-lightbox="portraits" data-title="Portrait Photo 2"><img src="portrait2.jpg" alt="Portrait Photo 2" loading="lazy"></a>
+            </div>
+
+            <div id="landscapes" class="portfolio">
+                <h3>Landscapes</h3>
+                <a href="landscape1.jpg" data-lightbox="landscapes" data-title="Landscape Photo 1"><img src="landscape1.jpg" alt="Landscape Photo 1" loading="lazy"></a>
+                <a href="landscape2.jpg" data-lightbox="landscapes" data-title="Landscape Photo 2"><img src="landscape2.jpg" alt="Landscape Photo 2" loading="lazy"></a>
             </div>
         </section>
 
@@ -92,8 +108,7 @@
         <p>&copy; 2024 Quockerwodger Photography. All rights reserved.</p>
     </footer>
 
-    <script>
-        // Add your JavaScript here
-    </script>
+    <!-- Lightbox2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox.min.js"></script>
 </body>
 </html>
