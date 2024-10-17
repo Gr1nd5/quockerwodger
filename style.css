@@ -4,20 +4,30 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
+    padding-top: 80px; /* Prevent content from hiding behind fixed header */
+}
+
+html {
+    scroll-behavior: smooth; /* Enable smooth scrolling */
 }
 
 /* Header */
 header {
     background-color: #333;
     color: white;
-    padding: 1rem;
+    padding: 1.5rem;
     text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
     transition: padding 0.3s ease, font-size 0.3s ease; /* Smooth transition for padding and font size */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for header */
 }
 
 header.shrink {
-    padding: 0.5rem; /* Reduced padding */
-    font-size: 1.5rem; /* Smaller font size */
+    padding: 0.5rem; /* Smaller padding when scrolled */
+    font-size: 1.2rem; /* Smaller font size when scrolled */
 }
 
 /* Navigation */
@@ -29,8 +39,26 @@ nav {
 nav a {
     margin: 0 1rem;
     text-decoration: none;
-    color: #333;
+    color: white;
     font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #007BFF; /* Hover effect for links */
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    gap: 10px; /* Space between icons */
+    float: right; /* Align social links to the right in the header */
+    margin-right: 1rem;
+}
+
+.social-links img {
+    width: 24px;
+    height: auto;
 }
 
 /* Section Styles */
@@ -48,6 +76,43 @@ section {
     margin: 1rem;
     display: inline-block;
     border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header, nav, .portfolio, .social-links {
+        text-align: center;
+        padding: 10px;
+    }
+
+    nav a {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .portfolio img {
+        width: 100%; /* Make images fill screen width on mobile */
+        margin-bottom: 15px;
+    }
+
+    .social-links img {
+        width: 30px; /* Smaller social icons on mobile */
+    }
+}
+
+@media (min-width: 769px) {
+    .portfolio img {
+        width: 30%; /* Three images per row on larger screens */
+        margin: 10px;
+    }
+
+    .social-links img {
+        width: 40px; /* Larger social icons on desktop */
+    }
+
+    nav a {
+        margin: 0 15px;
+    }
 }
 
 /* Contact Form */
@@ -79,22 +144,6 @@ footer {
     bottom: 0;
     width: 100%;
     display: flex;
-    justify-content: center; /* Centering footer content */
+    justify-content: center;
     align-items: center;
 }
-
-/* Social Links */
-.social-links {
-    display: flex;
-    gap: 10px; /* Space between icons */
-}
-
-.social-links img {
-    width: 24px; /* Adjust size as needed */
-    height: auto;
-}
-
-
-
-
-
