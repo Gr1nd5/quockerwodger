@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000; // Use the PORT provided by Render
 
 // Middleware to serve static files
 app.use(express.static(path.join(__dirname, 'public')));
@@ -17,7 +17,6 @@ app.get('/', (req, res) => {
 // Endpoint to handle form submissions
 app.post('/send', (req, res) => {
     const { name, email, message } = req.body;
-    // You can handle the form data here, e.g., send an email or save to a database
     console.log(`Name: ${name}, Email: ${email}, Message: ${message}`);
     res.status(200).send('Message received');
 });
