@@ -1,27 +1,27 @@
 const express = require('express');
-const compression = require('compression');
 const path = require('path');
+const compression = require('compression');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// Enable Gzip compression
+// Enable compression middleware
 app.use(compression());
 
-// Serve static files with caching headers
+// Set cache-control headers for static assets
 app.use(express.static(path.join(__dirname, 'public'), {
-  maxAge: '1y', // Cache static assets for one year
-  etag: false   // Disable etag (use maxAge instead)
+    maxAge: '1y', // Cache static assets for 1 year
+    etag: false // Disable ETag to rely on cache-control
 }));
 
-// Parse incoming requests with JSON payloads
-app.use(express.json());
-
-// Route to serve HTML file
+// Serve the HTML file with appropriate caching headers
 app.get('/', (req, res) => {
+    res.set({
+        'Cache-Control': 'public, max-age=3600', // Cache for 1 hour
+    });
     res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
 
-// Endpoint to handle form submissions
+// Endpoint for form submissions
 app.post('/send', (req, res) => {
     const { name, email, message } = req.body;
     console.log(`Name: ${name}, Email: ${email}, Message: ${message}`);
