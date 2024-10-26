@@ -1,12 +1,10 @@
 {
   "name": "quockerwodger",
   "version": "1.0.0",
-  "description": "Express.js app for Quockerwodger",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "build": "echo 'No build step needed'",
-    "vercel-build": "npm run build"
+    "build": "echo 'No build step needed for Express.js'"
   },
   "dependencies": {
     "express": "^4.17.1"
