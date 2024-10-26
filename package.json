@@ -1,16 +1,12 @@
 {
-  "name": "quockerwodger",
+  "name": "express-app",
   "version": "1.0.0",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "build": "echo 'No build step specified'"
+    "build": "echo 'Build step not needed'"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "express": "^4.21.1"
-  },
-  "description": ""
+    "express": "^4.17.1"
+  }
 }
