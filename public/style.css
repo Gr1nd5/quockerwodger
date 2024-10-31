@@ -75,7 +75,7 @@ section {
     max-width: 300px;
     margin: 1rem;
     display: inline-block;
-    border-radius: 8px;
+    border-radius: 8px; /* Rounded corners for images */
 }
 
 /* Responsive Design */
@@ -153,7 +153,6 @@ section {
 .contact-form a:hover {
     text-decoration: underline;
 }
-
 
 /* Footer */
 footer {
