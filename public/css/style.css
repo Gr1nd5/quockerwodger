@@ -204,6 +204,30 @@ html {
     .social-links img {
       width: 30px;
     }
+  
+    .blog-post {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .blog-post img {
+      max-width: 100%;
+      margin: 0 0 20px 0;
+    }
+  
+    .blog-snippet {
+      padding: 0 1rem;
+    }
+  
+    .contact-form input,
+    .contact-form textarea {
+      font-size: 1rem;
+    }
+  
+    .contact-form button {
+      width: 100%;
+      padding: 1rem;
+    }
   }
   
   @media (min-width: 769px) {
