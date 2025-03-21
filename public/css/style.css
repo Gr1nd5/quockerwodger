@@ -228,6 +228,18 @@ html {
       width: 100%;
       padding: 1rem;
     }
+
+    header {
+      padding: 20px 0;
+    }
+
+    .header-content h1 {
+      font-size: 2em;
+    }
+
+    .header-content p {
+      font-size: 1em;
+    }
   }
   
   @media (min-width: 769px) {
