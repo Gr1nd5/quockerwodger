@@ -27,3 +27,8 @@ app.post('/send', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
+// Serve the main.js file
+app.get('/js/main.js', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'js', 'main.js'));
+});
