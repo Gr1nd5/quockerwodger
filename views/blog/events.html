@@ -4,8 +4,8 @@
     <!-- Meta Tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Professional photography by Spencer Nakamura. Browse portfolio, blog, and contact for bookings." />
-    <title>Quockerwodger Photography</title>
+    <meta name="description" content="All events by Spencer Nakamura. Browse the complete collection of live concerts and event photography." />
+    <title>All Events | Quockerwodger Photography</title>
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XF6N01G6SX"></script>
@@ -51,8 +51,8 @@
     <!-- Header -->
     <header>
       <div class="header-content">
-        <h1>Quockerwodger Photography</h1>
-        <p>Capturing the essence of live events and concerts</p>
+        <h1>All Events</h1>
+        <p>Browse every live event and concert captured by Spencer Nakamura</p>
       </div>
       <div class="social-links">
         <a href="https://www.behance.net/Quockerwodger" target="_blank" rel="noopener">
@@ -69,27 +69,25 @@
           Tweet
         </a>
       </div>
-      <!-- Navigation: Place this inside header -->
+      <!-- Navigation -->
       <nav class="portfolio-categories">
-        <a href="#events">Concerts/Events</a>
+        <a href="/">Home</a>
       </nav>
     </header>
 
     <!-- Main Content -->
     <main>
-      <!-- Portfolio Section -->
+      <!-- Portfolio Section (All Events) -->
       <section id="portfolio">
         <h2>Portfolio</h2>
         <!-- Filter Buttons -->
         <div id="filter-buttons">
-          <!-- Filter buttons for venues -->
           <button class="filter-btn active" data-filter="all">All</button>
           <button class="filter-btn" data-filter="Vogue Theater">Vogue Theater</button>
           <button class="filter-btn" data-filter="Fortune Sound Club">Fortune Sound Club</button>
-          <!-- Add new venue filter buttons as needed -->
+          <!-- Add additional filter buttons for new venues as needed -->
         </div>
 
-        <!-- Events List Wrapper -->
         <div id="events-list">
           <!-- Example Event: Palaye Royale -->
           <div id="PalayeRoyale" class="portfolio concert-event" data-venue="Vogue Theater" data-date="2024-04-20">
@@ -144,60 +142,8 @@
               </a>
             </div>
           </div>
-          <!-- Add additional events below using similar structure -->
+          <!-- Add additional events below using the same structure -->
         </div>
-
-        <!-- "View All Events" Link -->
-        <div style="text-align:center; margin-top:20px;">
-          <a href="/blog/events" class="view-all-events" style="font-size:1.2em;">View All Events</a>
-        </div>
-      </section>
-
-      <!-- Blog Section -->
-      <section id="blog">
-        <h2>Blog</h2>
-        <article class="blog-post">
-          <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/ddc0d0221221357.67d0bc7c0dfc6.jpg" alt="Featured blog image" loading="lazy" />
-          <div class="blog-snippet">
-            <h3>Event Recap: Live at XYZ</h3>
-            <p>
-              Experience the thrill of a live performance as captured through my lens at XYZ venue...
-            </p>
-            <a href="/blog/event-recap-live-at-xyz">Read More</a>
-          </div>
-        </article>
-        <!-- Additional blog posts -->
-      </section>
-
-      <!-- About Section -->
-      <section id="about">
-        <h2>About Me</h2>
-        <p>
-          Hi, I'm Spencer Nakamura, a passionate photographer based in Vancouver. Photography is more than just a hobby—it's a way to tell stories through the lens.
-        </p>
-        <p>
-          My journey began at community events, capturing energy and moments, and has evolved into a passion for event photography, portraits, and more.
-        </p>
-        <p>
-          Browse my portfolio, read my blog for event recaps, or contact me for bookings.
-        </p>
-      </section>
-
-      <!-- Contact Section -->
-      <section id="contact">
-        <h2>Contact Me</h2>
-        <p>
-          Interested in working together? Fill out the form below and I’ll get back to you as soon as possible.
-        </p>
-        <form class="contact-form" action="/send" method="post">
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-          <button type="submit">Send Message</button>
-        </form>
-        <p>
-          Or email me directly at <a href="mailto:SpencerNakamura@quockerwodger.ca">SpencerNakamura@quockerwodger.ca</a>.
-        </p>
       </section>
     </main>
 
@@ -233,7 +179,7 @@
         const filterButtons = document.querySelectorAll('.filter-btn');
         const portfolioItems = document.querySelectorAll('.concert-event');
 
-        // Filtering events by venue
+        // Filtering by venue
         filterButtons.forEach(button => {
           button.addEventListener('click', function() {
             filterButtons.forEach(btn => btn.classList.remove('active'));

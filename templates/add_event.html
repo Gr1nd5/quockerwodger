@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Add Event - Quockerwodger Photography</title>
+    <style>
+      body { font-family: Arial, sans-serif; margin: 20px; }
+      form { max-width: 400px; }
+      label { display: block; margin-top: 10px; }
+      input { width: 100%; padding: 8px; margin-top: 5px; }
+      button { margin-top: 15px; padding: 10px 20px; }
+    </style>
+  </head>
+  <body>
+    <h1>Add New Event</h1>
+    <form method="POST">
+      <label>Artist:</label>
+      <input type="text" name="artist" required>
+      
+      <label>Tour:</label>
+      <input type="text" name="tour" required>
+      
+      <label>Venue:</label>
+      <input type="text" name="venue" required>
+      
+      <label>Date (YYYY-MM-DD):</label>
+      <input type="date" name="event_date" required>
+      
+      <label>Image URL:</label>
+      <input type="text" name="image_url" required>
+      
+      <label>Behance Link:</label>
+      <input type="text" name="behance_link" required>
+      
+      <button type="submit">Add Event</button>
+    </form>
+    <p><a href="{{ url_for('index') }}">Back to Events</a></p>
+  </body>
+</html>
