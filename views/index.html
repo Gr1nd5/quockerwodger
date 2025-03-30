@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Professional photography by Spencer Nakamura. Browse portfolio, blog, and contact for bookings." />
+    <title>Quockerwodger Photography</title>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XF6N01G6SX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){ dataLayer.push(arguments); }
+      gtag('js', new Date());
+      gtag('config', 'G-XF6N01G6SX');
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>
+      (function(w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l !== 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-KVXFKFDM');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Twitter Widget -->
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/css/style.css" />
+    <!-- Lightbox2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css" rel="stylesheet" />
+    <!-- Retro CSS -->
+    <link rel="stylesheet" href="/css/retro.css" />
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KVXFKFDM" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Header -->
+    <header>
+      <div class="header-content">
+        <h1>Quockerwodger Photography</h1>
+        <p>Capturing the essence of live events and concerts</p>
+      </div>
+      <div class="social-links">
+        <a href="https://www.behance.net/Quockerwodger" target="_blank" rel="noopener">
+          <img src="/logo/behance-logo.svg" alt="Behance logo" loading="lazy" />
+        </a>
+        <a href="https://www.linkedin.com/in/spencer-nakamura-9736ab2a3" target="_blank" rel="noopener">
+          <img src="/logo/linkedin-logo.svg" alt="LinkedIn logo" loading="lazy" />
+        </a>
+        <a href="https://www.instagram.com/quockerw0dger/" target="_blank" rel="noopener">
+          <img src="/logo/instagram-logo.svg" alt="Instagram logo" loading="lazy" />
+        </a>
+        <!-- Twitter Share Button -->
+        <a href="https://twitter.com/share" class="twitter-share-button" data-text="Check out Quockerwodger Photography by Spencer Nakamura!" data-url="https://quockerwodger.ca" data-hashtags="photography,Quockerwodger" data-show-count="false">
+          Tweet
+        </a>
+      </div>
+      <!-- Navigation: Place this inside header -->
+      <nav class="portfolio-categories">
+        <a href="#events">Concerts/Events</a>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Portfolio Section -->
+      <section id="portfolio">
+        <h2>Portfolio</h2>
+        <!-- Filter Buttons -->
+        <div id="filter-buttons">
+          <!-- Filter buttons for venues -->
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="Vogue Theater">Vogue Theater</button>
+          <button class="filter-btn" data-filter="Fortune Sound Club">Fortune Sound Club</button>
+          <!-- Add new venue filter buttons as needed -->
+        </div>
+
+        <!-- Events List Wrapper -->
+        <div id="events-list">
+          <!-- Example Event: Palaye Royale -->
+          <div id="PalayeRoyale" class="portfolio concert-event" data-venue="Vogue Theater" data-date="2024-04-20">
+            <h3>
+              <a href="https://www.behance.net/gallery/218831341/Palaye-Royale-Death-or-Glory-Tour-Vogue-Theater" target="_blank" rel="noopener">
+                Palaye Royale - Death or Glory Tour | Vogue Theater
+              </a>
+            </h3>
+            <span class="event-date">April 20, 2024</span>
+            <div class="photo-grid">
+              <a href="https://mir-s3-cdn-cf.behance.net/project_modules/fs/85e5e7218831341.67a7ea770e893.jpg" data-lightbox="events" data-title="Live at XYZ">
+                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/85e5e7218831341.67a7ea770e893.jpg" alt="Concert photo at XYZ" loading="lazy" />
+              </a>
+              <a href="https://mir-s3-cdn-cf.behance.net/project_modules/disp/8355d7218831341.67a7ea771238d.jpg" data-lightbox="events" data-title="Live at ABC">
+                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/8355d7218831341.67a7ea771238d.jpg" alt="Concert photo at ABC" loading="lazy" />
+              </a>
+            </div>
+          </div>
+
+          <!-- Example Event: idkhow -->
+          <div id="idkhow" class="portfolio concert-event" data-venue="Fortune Sound Club" data-date="2023-11-05">
+            <h3>
+              <a href="https://www.behance.net/gallery/197142727/idkhow-GLOOM-DIVISION-Tour-Fortune-Sound-Club" target="_blank" rel="noopener">
+                idkhow - GLOOM DIVISION Tour | Fortune Sound Club
+              </a>
+            </h3>
+            <span class="event-date">November 05, 2023</span>
+            <div class="photo-grid">
+              <a href="https://mir-s3-cdn-cf.behance.net/project_modules/disp/d513a3197142727.662b2dbea9cbd.jpg" data-lightbox="events" data-title="Live at Venue 1">
+                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/d513a3197142727.662b2dbea9cbd.jpg" alt="Concert photo at Venue 1" loading="lazy" />
+              </a>
+              <a href="https://mir-s3-cdn-cf.behance.net/project_modules/disp/b7c689197142727.662b2dbea7711.jpg" data-lightbox="events" data-title="Live at Venue 2">
+                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/b7c689197142727.662b2dbea7711.jpg" alt="Concert photo at Venue 2" loading="lazy" />
+              </a>
+            </div>
+          </div>
+
+          <!-- Example Event: K.Flay -->
+          <div id="KFlay" class="portfolio concert-event" data-venue="Vogue Theater" data-date="2023-07-15">
+            <h3>
+              <a href="https://www.behance.net/gallery/221221357/KFlay-Mono-Tour-Vogue-Theater" target="_blank" rel="noopener">
+                K.Flay - Mono Tour | Vogue Theater
+              </a>
+            </h3>
+            <span class="event-date">July 15, 2023</span>
+            <div class="photo-grid">
+              <a href="https://mir-s3-cdn-cf.behance.net/project_modules/fs/ddc0d0221221357.67d0bc7c0dfc6.jpg" data-lightbox="events" data-title="Live at Venue A">
+                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/ddc0d0221221357.67d0bc7c0dfc6.jpg" alt="Concert photo at Venue A" loading="lazy" />
+              </a>
+              <a href="https://mir-s3-cdn-cf.behance.net/project_modules/disp/7e68d9221221357.67d0bc7c094c7.jpg" data-lightbox="events" data-title="Live at Venue B">
+                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/7e68d9221221357.67d0bc7c094c7.jpg" alt="Concert photo at Venue B" loading="lazy" />
+              </a>
+            </div>
+          </div>
+          <!-- Add additional events below using similar structure -->
+        </div>
+
+        <!-- "View All Events" Link -->
+        <div style="text-align:center; margin-top:20px;">
+          <a href="/blog/events" class="view-all-events" style="font-size:1.2em;">View All Events</a>
+        </div>
+      </section>
+
+      <!-- Blog Section -->
+      <section id="blog">
+        <h2>Blog</h2>
+        <article class="blog-post">
+          <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/ddc0d0221221357.67d0bc7c0dfc6.jpg" alt="Featured blog image" loading="lazy" />
+          <div class="blog-snippet">
+            <h3>Event Recap: Live at XYZ</h3>
+            <p>
+              Experience the thrill of a live performance as captured through my lens at XYZ venue...
+            </p>
+            <a href="/blog/event-recap-live-at-xyz">Read More</a>
+          </div>
+        </article>
+        <!-- Additional blog posts -->
+      </section>
+
+      <!-- About Section -->
+      <section id="about">
+        <h2>About Me</h2>
+        <p>
+          Hi, I'm Spencer Nakamura, a passionate photographer based in Vancouver. Photography is more than just a hobby—it's a way to tell stories through the lens.
+        </p>
+        <p>
+          My journey began at community events, capturing energy and moments, and has evolved into a passion for event photography, portraits, and more.
+        </p>
+        <p>
+          Browse my portfolio, read my blog for event recaps, or contact me for bookings.
+        </p>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact">
+        <h2>Contact Me</h2>
+        <p>
+          Interested in working together? Fill out the form below and I’ll get back to you as soon as possible.
+        </p>
+        <form class="contact-form" action="/send" method="post">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+        <p>
+          Or email me directly at <a href="mailto:SpencerNakamura@quockerwodger.ca">SpencerNakamura@quockerwodger.ca</a>.
+        </p>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 Quockerwodger Photography. All rights reserved.</p>
+    </footer>
+
+    <!-- Lightbox2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox.min.js"></script>
+    <!-- Custom JavaScript for Navigation -->
+    <script>
+      function updateNavPosition() {
+        const header = document.querySelector('header');
+        const nav = document.querySelector('nav');
+        nav.style.top = header.offsetHeight + 'px';
+      }
+      window.addEventListener('load', updateNavPosition);
+      window.addEventListener('scroll', function () {
+        const header = document.querySelector('header');
+        if (window.scrollY > 50) {
+          header.classList.add('shrink');
+        } else {
+          header.classList.remove('shrink');
+        }
+        updateNavPosition();
+      });
+      window.addEventListener('resize', updateNavPosition);
+    </script>
+    <!-- Custom JavaScript for Filtering and Sorting -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.concert-event');
+
+        // Filtering events by venue
+        filterButtons.forEach(button => {
+          button.addEventListener('click', function() {
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            const filterValue = this.getAttribute('data-filter');
+            portfolioItems.forEach(item => {
+              if (filterValue === 'all' || item.getAttribute('data-venue') === filterValue) {
+                item.style.display = 'block';
+              } else {
+                item.style.display = 'none';
+              }
+            });
+          });
+        });
+
+        // Sorting events by date (most recent first)
+        const eventsList = document.getElementById('events-list');
+        const events = Array.from(eventsList.querySelectorAll('.concert-event'));
+        events.sort((a, b) => new Date(b.getAttribute('data-date')) - new Date(a.getAttribute('data-date')));
+        events.forEach(event => eventsList.appendChild(event));
+      });
+    </script>
+  </body>
+</html>

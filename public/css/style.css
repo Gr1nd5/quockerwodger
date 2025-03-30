@@ -1,0 +1,307 @@
+/* General Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  padding-top: 150px; /* Adjust padding for fixed header/nav */
+}
+
+/* Header */
+header {
+  background: url('/images/header-bg.jpg') no-repeat center center/cover;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  text-align: center;
+  padding: 50px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: padding 0.3s ease, font-size 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.header-content h1 {
+  font-size: 3em;
+  margin: 0;
+}
+
+.header-content p {
+  font-size: 1.2em;
+  margin: 10px 0 0;
+}
+
+header.shrink {
+  padding: 5px 0;
+  font-size: 1em;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Navigation */
+nav {
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+  transition: top 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 10px;
+  float: right;
+  margin-right: 1rem;
+}
+
+.social-links img {
+  width: 24px;
+  height: auto;
+}
+
+/* Filter Buttons */
+#filter-buttons {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.filter-btn {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: #007BFF;
+}
+
+/* Sections */
+section {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Portfolio Section */
+.portfolio {
+  /* Additional portfolio styles if needed */
+}
+
+/* Concert Event Specific Styling */
+.concert-event {
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.concert-event h3 {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+/* Responsive Photo Grid */
+.concert-event .photo-grid,
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.photo-grid img {
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+}
+
+/* Blog Section */
+#blog {
+  padding: 50px 0;
+  background: #f9f9f9;
+}
+
+.blog-post {
+  display: flex;
+  margin-bottom: 30px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.blog-post img {
+  max-width: 200px;
+  margin-right: 20px;
+  object-fit: cover;
+}
+
+.blog-snippet {
+  max-width: 600px;
+  padding: 1rem;
+  flex: 1;
+}
+
+.blog-snippet h3 {
+  margin: 0 0 10px;
+}
+
+.blog-snippet p {
+  margin: 0 0 10px;
+}
+
+.blog-snippet a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+.blog-snippet a:hover {
+  text-decoration: underline;
+}
+
+/* Contact Form */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin: 0.75rem 0;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background-color: #333;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #007BFF;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Carousel Styles */
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
+.carousel-item {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  margin-right: 10px;
+}
+
+.carousel-item img {
+  border-radius: 8px;
+  width: 100%;
+  height: auto;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header,
+  nav,
+  .portfolio,
+  .social-links {
+    text-align: center;
+    padding: 10px;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .portfolio img {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .social-links img {
+    width: 30px;
+  }
+
+  .blog-post {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blog-post img {
+    max-width: 100%;
+    margin: 0 0 20px 0;
+  }
+
+  .blog-snippet {
+    padding: 0 1rem;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 1rem;
+  }
+
+  .contact-form button {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  header {
+    padding: 20px 0;
+  }
+
+  .header-content h1 {
+    font-size: 2em;
+  }
+
+  .header-content p {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 769px) {
+  nav a {
+    margin: 0 15px;
+  }
+}
